@@ -31,6 +31,7 @@ const NavLinks = ({ toggleState, navClass, setToggleState }) => {
       >
         <BiSolidServer /> Products
       </NavLink>
+      <NavLink className="mint-nft navlink">Mint NFT</NavLink>
     </ul>
   );
 };

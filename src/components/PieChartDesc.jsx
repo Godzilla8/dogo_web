@@ -6,25 +6,25 @@ const PIECHART_DESC = [
   {
     icon: <GiAirBalloon />,
     title: "Aidrop",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid modi ratione maxime laborum eius quibusdam minus.",
+    desc: "Half of the total supply is reserved for community airdrops, rewarding early supporters and building a strong and engaged DOGO community.",
     percent: 50,
   },
   {
     icon: <FaGlassWaterDroplet />,
     title: "Liquidity",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid modi ratione maxime laborum eius quibusdam minus.",
+    desc: "300M $DOGO is allocated to liquidity, ensuring smooth trading, stability, and support for DOGO’s growth across decentralized exchanges.",
     percent: 30,
   },
   {
     icon: <GiShakingHands />,
     title: "Marketing",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid modi ratione maxime laborum eius quibusdam minus.",
+    desc: "150M $DOGO of the supply fuels marketing campaigns and strategic partnerships, driving visibility and expanding DOGO’s influence in the crypto space",
     percent: 15,
   },
   {
     icon: <FaPeopleGroup />,
     title: "Team",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid modi ratione maxime laborum eius quibusdam minus.",
+    desc: "50M $DOGO is set aside for the core team, aligning incentives with long-term success and maintaining a committed, focused development effort.",
     percent: 5,
   },
 ];
