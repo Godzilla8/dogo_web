@@ -1,0 +1,154 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* font-size: 15px; */
+
+  color-scheme: light dark;
+  color: #ffffffde;
+  --background: linear-gradient(to right, #141425, #1d1d34);
+  background: var(--background);
+
+  --main-bg-dark: #303c6a;
+  --main-bg: #141425;
+  --main-bg100: #22223b;
+  --color-purple: #8100b4;
+  --color-orange: #f06326;
+  --color-orange200: #ffa952;
+  --lightgray: #525281;
+  --textgray: #635e7c;
+  --textgray200: #77728e;
+  --white: #ededed;
+  --text: #8a8aa3;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  border: none;
+  font-family: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loader {
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  aspect-ratio: 1;
+}
+
+.loader:before,
+.loader:after {
+  content: " ";
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c);
+  background-size: 25% 50%;
+  animation: loading 5s infinite alternate;
+}
+
+.loader:after {
+  transform: scale(-1);
+}
+
+@keyframes bounce {
+  20% {
+    transform: rotate(15deg);
+    transform: scale(1);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+    transform: scale(1.5);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0%,
+  10% {
+    background-position: 33.4% 100%, 66.6% 100%;
+  }
+  40% {
+    background-position: 33.4% 0, 100% 100%;
+  }
+  70% {
+    background-position: 0 100%, 66.6% 0;
+  }
+  100% {
+    background-position: 33.4% 100%, 66.6% 100%;
+  }
+}
