@@ -29,9 +29,11 @@ const Home = () => {
             an unstoppable drive.
           </p>
           <div className="button-wrapper">
-            <button onClick={handleHuntEvent}>
-              <FaDog /> hunt event
-            </button>
+            <Link to="/mint_nft">
+              <button>
+                <FaDog /> Mint nft
+              </button>
+            </Link>
             <Link to="/timeline">
               <button>
                 <FaRoad /> roadmap

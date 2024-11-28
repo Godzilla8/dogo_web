@@ -1,19 +1,12 @@
 import React, { useState } from "react";
-import logo from "../assets/suit-dogo.png";
-import { NavLink } from "react-router-dom";
-import { BiMenu, BiSolidWallet, BiX } from "react-icons/bi";
+import { BiMenu, BiX } from "react-icons/bi";
 import NavLinks from "./NavLinks";
-import toast from "react-hot-toast";
+import Logo from "./Logo";
+import WalletConnection from "./WalletConnect";
+import { WalletDisconnectButton, WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
-const Navbar = () => {
+const Navbar = ({ setWalletAddress, walletAddress }) => {
   const [toggleState, setToggleState] = useState(false);
-  const [isCLicked, setIsClicked] = useState(false);
-
-  const toggleNotification = () => {
-    if (isCLicked) return;
-    toast.success("Connect wallet coming soon...");
-    setIsClicked(true);
-  };
 
   const navProps = {
     setToggleState,
@@ -22,19 +15,15 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-wrapper">
-        <div className="logo">
-          <NavLink className="logo-link" to="/">
-            <img src={logo} alt="logo" />
-            <span>
-              <span>DO</span>GO
-            </span>
-          </NavLink>
-        </div>
+        <Logo />
         <NavLinks navClass={"navlist"} />
         <div className="mob-items">
-          <div onClick={toggleNotification} className="nav-wallet">
-            <BiSolidWallet />
-            <span className="wallet-alert"></span>
+          <div className="connect-artificial">
+            <WalletMultiButton />
+          </div>
+          {/* <WalletDisconnectButton /> */}
+          <div className="nav-wallet">
+            {/* <WalletConnection setWalletAddress={setWalletAddress} walletAddress={walletAddress} /> */}
           </div>
           <div onClick={() => setToggleState(!toggleState)} className="hamburger-menu">
             {toggleState ? <BiX /> : <BiMenu />}

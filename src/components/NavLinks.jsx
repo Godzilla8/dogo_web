@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { BiBookReader, BiHomeAlt, BiLeaf, BiSolidServer } from "react-icons/bi";
+import { BiHomeAlt, BiLeaf, BiSolidServer } from "react-icons/bi";
 import { FaRoad } from "react-icons/fa";
 
 const NavLinks = ({ toggleState, navClass, setToggleState }) => {
@@ -31,7 +31,6 @@ const NavLinks = ({ toggleState, navClass, setToggleState }) => {
       >
         <BiSolidServer /> Products
       </NavLink>
-      <NavLink className="mint-nft navlink">Mint NFT</NavLink>
     </ul>
   );
 };

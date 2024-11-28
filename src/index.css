@@ -112,6 +112,17 @@ button {
   }
 }
 
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes bounce {
   0%,
   20%,

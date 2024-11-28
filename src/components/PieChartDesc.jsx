@@ -18,7 +18,7 @@ const PIECHART_DESC = [
   {
     icon: <GiShakingHands />,
     title: "Marketing",
-    desc: "150M $DOGO of the supply fuels marketing campaigns and strategic partnerships, driving visibility and expanding DOGO’s influence in the crypto space",
+    desc: "150M $DOGO of the supply fuels marketing campaigns and strategic partnerships, driving visibility and expanding DOGO’s influence in the crypto space.",
     percent: 15,
   },
   {
@@ -29,20 +29,33 @@ const PIECHART_DESC = [
   },
 ];
 
+const specialText = {
+  fontWeight: "900",
+  color: "#000",
+};
+
 const PieChartDesc = () => {
   return (
     <div className="piechart-desc">
-      {PIECHART_DESC.map((card) => (
-        <div key={card.title} className="pie-card">
-          <div className="icon">{card.icon}</div>
-          <h1>{card.title}</h1>
-          <div className="desc">{card.desc}</div>
-          <div className="percentage">{card.percent}%</div>
-          <div className="percent-bar">
-            <div className="bar" style={{ width: `${card.percent}%` }}></div>
+      {PIECHART_DESC.map((card) => {
+        const [a, b, ...otherText] = card.desc.split(" ");
+        return (
+          <div key={card.title} className="pie-card">
+            <div className="icon">{card.icon}</div>
+            <h1>{card.title}</h1>
+            <div className="desc">
+              <span style={specialText}>
+                {a} {b}
+              </span>{" "}
+              {otherText.join(" ")}
+            </div>
+            <div className="percentage">{card.percent}%</div>
+            <div className="percent-bar">
+              <div className="bar" style={{ width: `${card.percent}%` }}></div>
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
